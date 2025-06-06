@@ -1,5 +1,6 @@
 ---
 import mainLogo from "../../assets/mainLogo.svg"
+import hamburgerIcon from "../../assets/hamburger.svg"
 import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
 
 let assessmentBgColor = 'background-color: #00000000';
@@ -73,5 +74,6 @@ switch (Astro.props.currentPage) {
                 </a>
             </li>
         </ul>
+        <img src={hamburgerIcon.src} id="hamburger-icon" alt="Logo" width="40px" height="40px" />
     </nav>
 </div>

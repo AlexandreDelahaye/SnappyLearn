@@ -113,6 +113,7 @@ body {
 }
 .nav-links a.social-link {
     background-color: #00000000 !important;
+    padding: 0;
 }
 
 .nav-links a.alt {
@@ -126,8 +127,16 @@ body {
     gap: 9px;
 }
 
-@media (max-width: 768px) {
+#hamburger-icon {
+    display: none;
+}
+
+@media (max-width: 970px) {
     .nav-links {
-        /* display: none; */
+        display: none;
+    }
+
+    #hamburger-icon {
+        display: flex;
     }
 }
