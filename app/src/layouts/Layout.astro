@@ -12,16 +12,9 @@ import NavBar from "../components/topNavigation/NavBar.astro"
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<NavBar />
+		<NavBar currentPage={Astro.props.currentPage} />
+		<div class="page-container">
 			<slot />
+		</div>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
