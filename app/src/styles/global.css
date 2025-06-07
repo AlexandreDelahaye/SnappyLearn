@@ -233,6 +233,6 @@ mobile-dropdow
     }
 
     #mobile-dropdown {
-        display: none !;
+        display: none !important;
     }
 }
