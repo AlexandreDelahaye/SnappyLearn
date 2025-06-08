@@ -1,0 +1,50 @@
+---
+import closeIcon from "../../assets/close.svg"
+
+---
+
+<div id="mobile-navigation">
+    <div style="width: 100%; display: flex; flex-direction: column; align-items: flex-end;">
+        <img style="display: flex; aspect-ratio: 1/1;" src={closeIcon.src} height="40px" width="40px" alt="" onclick="document.getElementById('mobile-dropdown').style.display = 'none'; document.getElementById('mobile-navigation').style.display = 'none';">
+    </div>
+    
+    <div id="mobile-nav-links">
+        <button class="mobile-nav-link-button" onclick="document.location.href = '/assessment';">Assessment</button>
+        <button class="mobile-nav-link-button" onclick="document.location.href = '/coaching';">Coaching</button>
+        <div style="width: 100%;">
+            <button class="mobile-nav-link-button" onclick="document.getElementById('mobile-dropdown').style.display = 'flex';">Training</button>
+            <div id="mobile-dropdown">
+                <button class="mobile-nav-link-button-alt" onclick="document.location.href = '/training#public';">Public</button>
+                <button class="mobile-nav-link-button-alt" onclick="document.location.href = '/training#corporate';">Corporate</button>
+                <button class="mobile-nav-link-button-alt" onclick="document.location.href = '/training#upcoming';">Upcoming Courses</button>
+            </div>
+        </div>
+        <button class="mobile-nav-link-button" onclick="document.location.href = '/resources';">Resources</button>
+        <button class="mobile-nav-link-button" onclick="document.location.href = '/courses';">View Courses</button>
+        <div id="mobile-socials">
+            <a class="social-link" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6559 22.3883C17.5482 22.3883 22.3247 17.7373 22.3247 12C22.3247 6.2627 17.5482 1.61169 11.6559 1.61169C5.76371 1.61169 0.987122 6.2627 0.987122 12C0.987122 17.7373 5.76371 22.3883 11.6559 22.3883Z" stroke="white" stroke-width="1.5"/>
+                    <path d="M9.20748 9.9028C9.70699 9.9028 10.1119 9.50852 10.1119 9.02214C10.1119 8.53576 9.70699 8.14148 9.20748 8.14148C8.70797 8.14148 8.30304 8.53576 8.30304 9.02214C8.30304 9.50852 8.70797 9.9028 9.20748 9.9028Z" fill="white"/>
+                    <path d="M9.96106 10.491H8.45366C8.37045 10.491 8.30292 10.5568 8.30292 10.6378V15.0411C8.30292 15.1221 8.37045 15.1879 8.45366 15.1879H9.96106C10.0443 15.1879 10.1118 15.1221 10.1118 15.0411V10.6378C10.1118 10.5568 10.0443 10.491 9.96106 10.491Z" fill="white"/>
+                    <path d="M14.453 10.2468C13.8088 10.0319 13.0029 10.2207 12.5196 10.5592C12.5031 10.4961 12.444 10.4491 12.3737 10.4491H10.8663C10.7831 10.4491 10.7156 10.5148 10.7156 10.5959V14.9992C10.7156 15.0802 10.7831 15.1459 10.8663 15.1459H12.3737C12.4569 15.1459 12.5245 15.0802 12.5245 14.9992V11.8347C12.7681 11.6303 13.0819 11.5652 13.3388 11.6714C13.5878 11.7739 13.7304 12.024 13.7304 12.3572V14.9992C13.7304 15.0802 13.7979 15.1459 13.8811 15.1459H15.3885C15.4717 15.1459 15.5393 15.0802 15.5393 14.9992V12.0616C15.5221 10.8554 14.9393 10.4089 14.453 10.2468Z" fill="white"/>
+                </svg>
+                </a>
+            
+                <a class="social-link" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9935 22.3883C17.8858 22.3883 22.6624 17.7373 22.6624 12C22.6624 6.2627 17.8858 1.61169 11.9935 1.61169C6.10133 1.61169 1.32474 6.2627 1.32474 12C1.32474 17.7373 6.10133 22.3883 11.9935 22.3883Z" stroke="white" stroke-width="1.5"/>
+                    <path d="M12.9648 9.34093H13.9453C14.0355 9.34093 14.1088 9.27375 14.1088 9.19098V8.2913C14.1088 8.20853 14.0355 8.14136 13.9453 8.14136H12.9648C11.9738 8.14136 11.1671 8.88119 11.1671 9.79077V10.8404H10.0232C9.93296 10.8404 9.85974 10.9076 9.85974 10.9903V11.89C9.85974 11.9728 9.93296 12.04 10.0232 12.04H11.1671V15.1888C11.1671 15.2716 11.2403 15.3388 11.3306 15.3388H12.3111C12.4013 15.3388 12.4745 15.2716 12.4745 15.1888V12.04H13.6185C13.6888 12.04 13.7512 11.9986 13.7737 11.9374L14.1006 11.0377C14.1173 10.9921 14.1088 10.9418 14.078 10.9025C14.047 10.8635 13.998 10.8404 13.9453 10.8404H12.4745V9.79077C12.4745 9.54276 12.6945 9.34093 12.9648 9.34093Z" fill="white"/>
+                </svg>
+
+                </a>
+
+                <a class="social-link" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.3312 22.3883C18.2234 22.3883 23 17.7373 23 12C23 6.2627 18.2234 1.61169 12.3312 1.61169C6.43894 1.61169 1.66235 6.2627 1.66235 12C1.66235 17.7373 6.43894 22.3883 12.3312 22.3883Z" stroke="white" stroke-width="1.5"/>
+                    <path d="M15.8184 10.0795C15.7689 10.025 15.6891 10.0113 15.6236 10.0449C15.5829 10.0658 15.5063 10.0932 15.4154 10.1203C15.5301 9.96756 15.6223 9.79661 15.663 9.64294C15.6806 9.57671 15.6549 9.50689 15.5988 9.46741C15.5428 9.42826 15.4682 9.42826 15.4122 9.46741C15.3239 9.52908 14.8978 9.71439 14.6284 9.77442C14.0196 9.24034 13.311 9.18487 12.5745 9.61553C11.9758 9.96561 11.8455 10.6775 11.8709 11.1114C10.5004 10.9793 9.64854 10.2543 9.16902 9.65436C9.13546 9.61227 9.08139 9.59009 9.03057 9.59335C8.97715 9.59726 8.92893 9.62695 8.90157 9.67295C8.67484 10.0563 8.61197 10.4801 8.72045 10.8987C8.77974 11.1271 8.88333 11.3284 9.00353 11.4915C8.94587 11.4631 8.89017 11.4276 8.83772 11.3852C8.78951 11.3453 8.72208 11.3378 8.66507 11.3643C8.60839 11.3914 8.57223 11.4488 8.57223 11.5117C8.57223 12.2305 9.02112 12.7101 9.44037 12.9606C9.37262 12.9525 9.30193 12.9375 9.23059 12.9156C9.16934 12.897 9.10289 12.9156 9.06054 12.9639C9.01819 13.0119 9.00809 13.0804 9.03448 13.1388C9.27 13.6605 9.71629 14.0193 10.2685 14.1495C9.78633 14.433 9.141 14.572 8.55008 14.5038C8.47352 14.4931 8.40055 14.5417 8.37645 14.6154C8.35234 14.6892 8.38394 14.7701 8.45137 14.8079C9.34786 15.312 10.1583 15.4921 10.8587 15.4921C11.878 15.4921 12.6647 15.111 13.1436 14.7923C14.4346 13.9342 15.2392 12.3936 15.1272 11.0152C15.334 10.8622 15.6435 10.5796 15.8354 10.2759C15.8751 10.2145 15.8679 10.1336 15.8184 10.0795Z" fill="white"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</div>
