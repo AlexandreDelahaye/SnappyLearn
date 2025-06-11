@@ -1,0 +1,23 @@
+---
+import partner1 from '../../assets/partner1.svg';
+import partner2 from '../../assets/partner2.svg';
+import partner3 from '../../assets/partner3.svg';
+
+const partners = [
+  { name: "Partner One", logo: partner1 },
+  { name: "Partner Two", logo: partner2 },
+  { name: "Partner Three", logo: partner3 }
+];
+---
+
+<div class="our-services-banner">
+  <h2>OUR PARTNERS</h2>
+  <div>
+    {partners.map((partner) => (
+      <div class="our-services-column">
+        <img src={partner.logo.src} alt={partner.name} width="80" height="80" />
+        <h3>{partner.name}</h3>
+      </div>
+    ))}
+  </div>
+</div>
