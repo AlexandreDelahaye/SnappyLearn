@@ -248,7 +248,7 @@ h2.home-section-title {
     align-items: flex-start;
 }
 
-.hero-banner > div > h1 {
+.hero-banner > div > h1, .assessment-top-banner > div > h1 {
     display: flex;
     color: var(--M3-sys-dark-primary, #9BD4A0);
     margin: 0;
@@ -274,7 +274,7 @@ h2.home-section-title {
     letter-spacing: var(--Static-Headline-Large-Tracking, 0px);
 }
 
-.hero-banner > div > a {
+.hero-banner > div > a, .assessment-top-banner > div > a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -539,6 +539,85 @@ h2.home-section-title {
     line-height: var(--Static-Body-Medium-Line-Height, 20px); /* 142.857% */
     letter-spacing: var(--Static-Body-Medium-Tracking, 0.25px);
 }
+
+.assessment-top-banner {
+    height: 275px;
+    flex-shrink: 0;
+    background-image: url('https://media.discordapp.net/attachments/810896267525750854/1385275098952368138/Media.png?ex=68557978&is=685427f8&hm=c8fbb39af369842b134a2ad88ca42e5d9caa51518f0aca8b74572455c8fed30c&=&format=webp&quality=lossless&width=2784&height=682'), none;
+    background-color: var(--Schemes-Surface-Container-High, #D1D6CE);
+    background-position: 50%, 0% 0%;
+    background-size: contain, auto;
+    background-repeat: no-repeat, repeat;
+    background-attachment: scroll, scroll;
+    background-origin: padding-box, padding-box;
+    background-clip: border-box, border-box;
+    padding-top: 95px;
+    padding-left: 95px;
+}
+
+.assessment-top-banner > div {
+    display: flex;
+    width: 1108px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.assessment-top-banner > div > h1 {
+    color: var(--M3-sys-dark-high-contrast-primary, #C4FEC7);
+    align-self: stretch;
+    /* M3/display/large-emphasized */
+    font-family: var(--Static-Display-Large-Font, Roboto);
+    font-size: var(--Static-Display-Large-Size, 57px);
+    font-style: italic;
+    font-weight: 700;
+    line-height: var(--Static-Display-Large-Line-Height, 64px); /* 112.281% */
+    letter-spacing: var(--Static-Display-Large-Tracking, -0.25px);
+}
+
+.assessment-body-container-why-assessment, .assessment-body-container-assessment-types {
+    display: flex;
+    /* width: 1512px; */
+    padding: 40px 202px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    background: var(--M3-sys-dark-high-contrast-surface, #101510);
+}
+
+.assessment-body-container-why-assessment > h3, .assessment-body-container-assessment-types > h3 {
+    color: var(--M3-sys-dark-high-contrast-on-surface, #FFF);
+
+    /* M3/headline/large */
+    font-family: var(--Static-Headline-Large-Font, Roboto);
+    font-size: var(--Static-Headline-Large-Size, 32px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--Static-Headline-Large-Line-Height, 40px); /* 125% */
+    letter-spacing: var(--Static-Headline-Large-Tracking, 0px);
+}
+
+.assessment-body-container-why-assessment > p {
+    align-self: stretch;
+    color: var(--M3-sys-dark-high-contrast-on-surface, #FFF);
+
+    text-align: justify;
+    /* M3/headline/small */
+    font-family: var(--Static-Headline-Small-Font, Roboto);
+    font-size: var(--Static-Headline-Small-Size, 24px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Static-Headline-Small-Line-Height, 32px); /* 133.333% */
+    letter-spacing: var(--Static-Headline-Small-Tracking, 0px);
+}
+
+
+
+
+
+
+
+
 
 @media (max-width: 1600px) {
     .what-we-do-element {
