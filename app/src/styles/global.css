@@ -612,8 +612,169 @@ h2.home-section-title {
 }
 
 
+/* WEEELARUUUUUUUE */
+/* CSS Variables for easier customization */
+:root {
+    --primary-color: #2563eb; /* Blue-600 */
+    --primary-hover-color: #1d4ed8; /* Blue-700 */
+    --secondary-color: #f3f4f6; /* Gray-100 */
+    --secondary-hover-color: #e5e7eb; /* Gray-200 */
+    --text-color-dark: #fff; /* Gray-800 */
+    --text-color-medium: #fff; /* Gray-600 */
+    --text-color-light: #fff; /* White */
+    --border-color: #e5e7eb; /* Gray-200 */
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-medium: rgba(0, 0, 0, 0.2);
+    --transition-speed: 0.150s;
 
+    --spacing-xs: 0.5rem;   /* ~8px */
+    --spacing-sm: 0.75rem;  /* ~12px */
+    --spacing-md: 1rem;     /* ~16px */
+    --spacing-lg: 1.5rem;   /* ~24px */
+    --spacing-xl: 2rem;     /* ~32px */
 
+    --font-size-sm: 0.875rem; /* ~14px */
+    --font-size-base: 1rem;   /* ~16px */
+    --font-size-lg: 1.125rem; /* ~18px */
+    --font-size-xl: 1.25rem; /* ~20px */
+    --font-size-2xl: 1.5rem; /* ~24px */
+}
+
+/* Tabs Container - Designed for embeddability */
+.tabs-container {
+    font-family: "Inter", sans-serif; /* Apply font locally to component */
+    width: 100%;
+    max-width: 60rem; /* max-width: 960px */
+    background-color: #2D322C;
+    /* box-shadow: 0 1.25rem 1.5625rem -0.3125rem var(--shadow-light), 0 0.5rem 0.625rem -0.375rem var(--shadow-light); */
+    overflow: hidden;
+    margin: var(--spacing-xl) auto; /* Centers the component and provides external margin */
+    box-sizing: border-box; /* Ensures padding is included in element's total width */
+}
+
+/* Tab Buttons Container */
+.tab-buttons {
+    display: flex;
+    border-bottom: 1px solid #bdc5ba;
+}
+
+/* Individual Tab Button */
+.tab-button {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-align: center;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    transition: all var(--transition-speed) ease-in-out;
+    cursor: pointer;
+    border: none;
+    color: var(--text-color-medium);
+    outline: none;
+    position: relative;
+    padding-bottom: calc(var(--spacing-sm) + 3px); /* Add space for bottom border */
+    background-color: transparent;
+
+    /* color: var(--M3-sys-dark-high-contrast-primary, #C4FEC7); */
+    text-align: center;
+
+    /* M3/title/small */
+    font-family: var(--Static-Title-Small-Font, Roboto);
+    font-size: var(--Static-Title-Small-Size, 14px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--Static-Title-Small-Line-Height, 20px); /* 142.857% */
+    letter-spacing: var(--Static-Title-Small-Tracking, 0.1px);
+    }
+
+.tab-button:hover {
+    background-color: #383e37;
+}
+
+.tab-button.active {
+    color: #C4FEC7;
+    /* box-shadow: inset 0 0.1875rem 0.375rem var(--shadow-light); */
+    border-bottom: 3px solid #C4FEC7;
+}
+
+/* Tab Content Container */
+.tab-content-container {
+    padding: var(--spacing-xl);
+    border-bottom-left-radius: var(--spacing-sm);
+    border-bottom-right-radius: var(--spacing-sm);
+}
+
+/* Individual Tab Content */
+.tab-content.hidden {
+    display: none;
+}
+
+.tab-content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(0.625rem); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section-wrapper {
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-wrapper:last-child {
+    margin-bottom: 0;
+}
+
+.section-heading {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--text-color-dark);
+    margin-bottom: var(--spacing-sm);
+    /* border-radius: 0.25rem; */
+
+    color: var(--M3-sys-dark-high-contrast-on-surface, #FFF);
+
+    /* M3/headline/large */
+    font-family: var(--Static-Headline-Large-Font, Roboto);
+    font-size: var(--Static-Headline-Large-Size, 32px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--Static-Headline-Large-Line-Height, 40px); /* 125% */
+    letter-spacing: var(--Static-Headline-Large-Tracking, 0px);
+}
+
+.section-paragraph {
+    color: var(--text-color-medium);
+    line-height: 1.625;
+    font-size: var(--font-size-base);
+    color: var(--M3-sys-dark-high-contrast-on-surface, #FFF);
+
+    /* M3/headline/small */
+    font-family: var(--Static-Headline-Small-Font, Roboto);
+    font-size: var(--Static-Headline-Small-Size, 24px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Static-Headline-Small-Line-Height, 32px); /* 133.333% */
+    letter-spacing: var(--Static-Headline-Small-Tracking, 0px);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 40rem) { /* Approx 640px */
+    .tabs-container {
+        margin: var(--spacing-md) auto; /* Adjust outer margin */
+    }
+    .tab-button {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.75rem;
+    }
+    .tab-content-container {
+        padding: var(--spacing-lg);
+    }
+    .section-heading {
+        font-size: var(--font-size-xl);
+    }
+}
+/* FINITO */
 
 
 

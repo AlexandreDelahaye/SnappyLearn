@@ -1,0 +1,251 @@
+---
+
+---
+
+<style>
+    
+</style>
+
+<div class="tabs-container" id="tabs-main-container">
+    <!-- Tab Buttons Container -->
+    <div class="tab-buttons" id="tab-buttons">
+        <!-- Buttons will be injected here by JavaScript -->
+    </div>
+
+    <!-- Tab Content Container -->
+    <div class="tab-content-container" id="tab-content-container">
+        <!-- Content will be injected here by JavaScript -->
+    </div>
+</div>
+
+<script>
+    /**
+     * Tab data configuration.
+     * Each object defines a tab with an ID, title, and an array of content sections.
+     * Each section has a heading and a paragraph.
+     */
+    const tabData = [
+        {
+            id: 'leadership',
+            title: 'Leadership',
+            sections: [
+                {
+                    heading: 'LEADERSHIP ASSESSMENT',
+                    paragraph: 'The effectiveness of Agile development efforts will be either magnified or diminished by your organization’s leaders. The Apex leadership assessment quantitatively assesses the skills and capabilities of your leadership team. As outlined in the Agile Manifesto, the following principles are of paramount importance to leaders. First, producing value: does leadership recognize that the production of value over the production of features? Second, encouraging change: does leadership not only welcome change, and not only encourage change, but actually reward change? And third, deliver frequently: does leadership guide the organization to processes conducive to continuous improvement and delivery? Apex’s leadership assessment comprehensively surveys leadership skill in your organization, and it produces recommendations to get leadership on the right track to agility.'
+                }
+            ]
+        },
+        {
+            id: 'organization',
+            title: 'Organization',
+            sections: [
+                {
+                    heading: 'ORGANIZATION ASSESSMENT',
+                    paragraph: 'As important as Agile is to your software development teams, many of the same principles apply to your organization. The Apex Organization Assessment will measure your current capabilities as an Agile organization. We will identify those areas where you are on the right track as well as those where you are following practices that are counterproductive. Like a tried and true family recipe, we have distilled our decades of experience in the software industry to create a comprehensive assessment of software development practices. Among others metrics, we assess the following key capabilities: value: do each your product releases produce recognizable and useful value for the customer; openness to change: are your organizations receptive and encouraging of changing requirements, both early and late in the product cycle; and frequent deliveries via a continuous improvement and delivery pipeline.'
+                }
+            ]
+        },
+        {
+            id: 'portfolio',
+            title: 'Portfolio',
+            sections: [
+                {
+                    heading: 'Upholding Integrity & Transparency',
+                    paragraph: 'We operate with the highest levels of integrity and unwavering transparency, ensuring all our actions consistently align with our core ethical principles. Open and honest communication is fundamental to building enduring trust with all our stakeholders and partners.'
+                },
+                {
+                    heading: 'Commitment to Excellence & Quality',
+                    paragraph: 'Striving for unparalleled excellence in every endeavor, we are dedicated to delivering high-quality products and services that consistently exceed expectations. Continuous improvement, meticulous attention to detail, and a relentless pursuit of perfection are at the heart of our work.'
+                },
+                {
+                    heading: 'Prioritizing Customer Centricity',
+                    paragraph: 'Our customers are unequivocally at the core of our entire business model. We are deeply dedicated to understanding their evolving needs and consistently delivering solutions that not only meet but also surpass their expectations, fostering robust and long-term relationships built on mutual success.'
+                }
+            ]
+        },
+        {
+            id: 'program',
+            title: 'Program',
+            sections: [
+                {
+                    heading: 'Driving Innovation Forward',
+                    paragraph: 'Our core mission is to push the boundaries of technology, developing innovative solutions that address complex challenges and improve everyday life. We believe in continuous learning and adapting to new paradigms, ensuring we remain at the forefront of technological advancement.'
+                },
+                {
+                    heading: 'Empowering Global Communities',
+                    paragraph: 'Beyond technology, we are committed to empowering communities through accessible education and inclusive platforms. We strive to create tools and resources that foster growth and connectivity for everyone, regardless of their background or geographical location, aiming for truly global impact.'
+                }
+            ]
+        },
+        {
+            id: 'team',
+            title: 'Team',
+            sections: [
+                {
+                    heading: 'Pioneering a Connected Future',
+                    paragraph: 'We envision a future where technology seamlessly integrates into society, enhancing human potential and creating a more connected and sustainable world. Our focus is on achieving long-term, positive impact and promoting responsible development practices for generations to come.'
+                },
+                {
+                    heading: 'Cultivating Global Impact',
+                    paragraph: 'Our vision extends globally, aiming to make a significant and transformative impact on diverse cultures and economies. We are dedicated to fostering strong collaborations and strategic partnerships to achieve our shared goals for a brighter, more equitable tomorrow.'
+                }
+            ]
+        },
+        {
+            id: 'individual',
+            title: 'Individual',
+            sections: [
+                {
+                    heading: 'Upholding Integrity & Transparency',
+                    paragraph: 'We operate with the highest levels of integrity and unwavering transparency, ensuring all our actions consistently align with our core ethical principles. Open and honest communication is fundamental to building enduring trust with all our stakeholders and partners.'
+                },
+                {
+                    heading: 'Commitment to Excellence & Quality',
+                    paragraph: 'Striving for unparalleled excellence in every endeavor, we are dedicated to delivering high-quality products and services that consistently exceed expectations. Continuous improvement, meticulous attention to detail, and a relentless pursuit of perfection are at the heart of our work.'
+                },
+                {
+                    heading: 'Prioritizing Customer Centricity',
+                    paragraph: 'Our customers are unequivocally at the core of our entire business model. We are deeply dedicated to understanding their evolving needs and consistently delivering solutions that not only meet but also surpass their expectations, fostering robust and long-term relationships built on mutual success.'
+                }
+            ]
+        },
+        
+    ];
+
+    /**
+     * Manages the tab component's rendering and interaction.
+     * @param {string} containerId - The ID of the main container for the tabs.
+     * @param {Array<Object>} data - The array of tab data.
+     */
+    function TabComponent(containerId, data) {
+        const container = document.getElementById(containerId);
+        if (!container) {
+            console.error(`TabComponent: Container with ID '${containerId}' not found.`);
+            return;
+        }
+
+        // Check if containers already exist (for multiple initializations or dynamic loading)
+        let tabButtonsContainer = container.querySelector('.tab-buttons');
+        if (!tabButtonsContainer) {
+            tabButtonsContainer = document.createElement('div');
+            tabButtonsContainer.classList.add('tab-buttons');
+            tabButtonsContainer.id = 'tab-buttons';
+            container.appendChild(tabButtonsContainer);
+        } else {
+             // Clear existing buttons if re-initializing
+            tabButtonsContainer.innerHTML = '';
+        }
+
+
+        let tabContentContainer = container.querySelector('.tab-content-container');
+        if (!tabContentContainer) {
+            tabContentContainer = document.createElement('div');
+            tabContentContainer.classList.add('tab-content-container');
+            tabContentContainer.id = 'tab-content-container';
+            container.appendChild(tabContentContainer);
+        } else {
+             // Clear existing content if re-initializing
+            tabContentContainer.innerHTML = '';
+        }
+
+
+        let activeTabId = data[0] ? data[0].id : null;
+
+        /**
+         * Creates and appends tab buttons and their corresponding content divs to the DOM.
+         */
+        const createTabs = () => {
+            data.forEach(tab => {
+                // Create button
+                const button = document.createElement('button');
+                button.setAttribute('data-tab-id', tab.id);
+                button.textContent = tab.title;
+                button.classList.add('tab-button');
+                tabButtonsContainer.appendChild(button);
+
+                // Create content div
+                const contentDiv = document.createElement('div');
+                contentDiv.setAttribute('data-tab-content-id', tab.id);
+                contentDiv.classList.add('tab-content');
+
+                tab.sections.forEach((section, index) => {
+                    const sectionDiv = document.createElement('div');
+                    sectionDiv.classList.add('section-wrapper');
+                    if (index === tab.sections.length - 1) {
+                        sectionDiv.classList.add('last-section');
+                    }
+
+                    const heading = document.createElement('h2');
+                    heading.classList.add('section-heading');
+                    heading.textContent = section.heading;
+
+                    const paragraph = document.createElement('p');
+                    paragraph.classList.add('section-paragraph');
+                    paragraph.textContent = section.paragraph;
+
+                    sectionDiv.appendChild(heading);
+                    sectionDiv.appendChild(paragraph);
+                    contentDiv.appendChild(sectionDiv);
+                });
+                tabContentContainer.appendChild(contentDiv);
+            });
+        };
+
+        /**
+         * Activates a specific tab, updating button styles and content visibility.
+         * @param {string} tabId - The ID of the tab to activate.
+         */
+        const activateTab = (tabId) => {
+            activeTabId = tabId;
+
+            Array.from(tabButtonsContainer.children).forEach(button => {
+                if (button.getAttribute('data-tab-id') === tabId) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+
+            Array.from(tabContentContainer.children).forEach(content => {
+                if (content.getAttribute('data-tab-content-id') === tabId) {
+                    content.classList.remove('hidden');
+                } else {
+                    content.classList.add('hidden');
+                }
+            });
+        };
+
+        /**
+         * Initializes the tab component by creating tabs and setting up event listeners.
+         */
+        const init = () => {
+            createTabs();
+
+            tabButtonsContainer.addEventListener('click', (event) => {
+                const clickedButton = event.target.closest('.tab-button');
+                if (clickedButton) {
+                    const tabId = clickedButton.getAttribute('data-tab-id');
+                    if (tabId && tabId !== activeTabId) {
+                        activateTab(tabId);
+                    }
+                }
+            });
+
+            if (activeTabId) {
+                activateTab(activeTabId);
+            }
+        };
+
+        return {
+            init: init,
+            activateTab: activateTab
+        };
+    }
+
+    // Initialize the Tab Component when the DOM is fully loaded
+    document.addEventListener('DOMContentLoaded', () => {
+        // This assumes the div with id="tabs-main-container" is present in the parent HTML.
+        const myTabs = TabComponent('tabs-main-container', tabData);
+        myTabs.init();
+    });
+</script>
