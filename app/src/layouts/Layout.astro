@@ -1,7 +1,8 @@
 ---
-import "../styles/global.css"
-import NavBar from "../components/topNavigation/NavBar.astro"
-import MobileNavBar from "../components/topNavigation/MobileNavBar.astro"
+import "../styles/global.css";
+import NavBar from "../components/topNavigation/NavBar.astro";
+import MobileNavBar from "../components/topNavigation/MobileNavBar.astro";
+import Footer from "../components/Footer/Footer.astro";
 ---
 <!doctype html>
 <html lang="en">
@@ -16,8 +17,13 @@ import MobileNavBar from "../components/topNavigation/MobileNavBar.astro"
 	<body>
 		<NavBar currentPage={Astro.props.currentPage} />
 		<MobileNavBar />
-		<div class="page-container">
-			<slot />
-		</div>
-	</body>
+		<main class="flex-grow">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+
+
+---
+
 </html>
