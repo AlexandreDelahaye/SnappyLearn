@@ -346,6 +346,8 @@ h2.home-section-title {
     margin: 0;
     width: 247px;
     text-justify: inter-word;
+    text-align: justify;
+    height: 180px;
 }
 
 .our-services-column > a {
@@ -531,6 +533,7 @@ h2.home-section-title {
     width: 180px;
     color: var(--M3-sys-dark-high-contrast-on-surface, #FFF);
 
+    text-align: justify;
     /* M3/body/medium */
     font-family: var(--Static-Body-Medium-Font, Roboto);
     font-size: var(--Static-Body-Medium-Size, 14px);
@@ -749,6 +752,7 @@ h2.home-section-title {
     font-size: var(--font-size-base);
     color: var(--M3-sys-dark-high-contrast-on-surface, #FFF);
 
+    text-align: justify;
     /* M3/headline/small */
     font-family: var(--Static-Headline-Small-Font, Roboto);
     font-size: var(--Static-Headline-Small-Size, 24px);
