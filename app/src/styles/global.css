@@ -274,7 +274,7 @@ h2.home-section-title {
     letter-spacing: var(--Static-Headline-Large-Tracking, 0px);
 }
 
-.hero-banner > div > a, .assessment-top-banner > div > a {
+.hero-banner > div > a, .assessment-top-banner > div > a, .training-element {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -760,6 +760,50 @@ h2.home-section-title {
     font-weight: 400;
     line-height: var(--Static-Headline-Small-Line-Height, 32px); /* 133.333% */
     letter-spacing: var(--Static-Headline-Small-Tracking, 0px);
+}
+
+.training-content-container {
+    display: flex;
+    /* width: 1512px; */
+    padding: 40px 202px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    background: var(--M3-sys-dark-high-contrast-surface, #101510);
+}
+
+.training-content-container > h3 {
+    color: var(--M3-sys-dark-high-contrast-on-surface, #FFF);
+
+    /* M3/headline/large */
+    font-family: var(--Static-Headline-Large-Font, Roboto);
+    font-size: var(--Static-Headline-Large-Size, 32px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: var(--Static-Headline-Large-Line-Height, 40px); /* 125% */
+    letter-spacing: var(--Static-Headline-Large-Tracking, 0px);
+}
+
+.training-element-list {
+    display: flex;
+    /* width: 1214px; */
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.training-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    background: var(--M3-sys-dark-high-contrast-primary, #C4FEC7);
+}
+
+.training-element.alt
+{
+    background: var(--M3-sys-dark-high-contrast-secondary-container, #B4C8B2);
 }
 
 /* Responsive adjustments for smaller screens */
