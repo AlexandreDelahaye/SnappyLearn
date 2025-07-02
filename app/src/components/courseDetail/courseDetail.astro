@@ -1,0 +1,197 @@
+---
+import CourseIcon from "../../assets/courseDetail.svg";
+import ReviewIcon from "../../assets/courseDetail1.svg";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Detail</title>
+  <link rel="stylesheet" href="/styles.css" /> <!-- replace with your global stylesheet -->
+
+  <style>
+    .course-detail-grid,
+    .course-detail-grid h1,
+    .course-detail-grid h2,
+    .course-detail-grid h3,
+    .course-detail-grid h4,
+    .course-detail-grid h5,
+    .course-detail-grid h6,
+    .course-detail-grid p,
+    .course-detail-grid a,
+    .course-detail-grid li,
+    .course-detail-grid span,
+    .course-detail-grid button {
+    color: white;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Top Header already in place -->
+
+  <!-- Banner -->
+  <div class="hero-banner">
+    <div>
+      <h1>COURSES</h1>
+    </div>
+    <svg id="hero-bg-svg" xmlns="http://www.w3.org/2000/svg" width="499" height="247" viewBox="0 0 499 247" fill="none">
+      <path opacity="0.3" d="M220.942 95.8823C249.786 89.8704 279.714 91.7797 307.532 101.406C335.35 111.033 360.012 128.015 378.885 150.539L340.993 176.342L474.028 200.809L498.6 68.9811L455.397 98.3783C420.237 53.2014 370.745 21.2521 314.992 7.73921C259.239 -5.77368 200.512 -0.0530709 148.386 23.9684C96.2607 47.9898 53.8107 88.8952 27.957 140.016C2.10342 191.136 -5.62882 249.456 6.02093 305.467L96.1444 286.299C87.4351 244.589 95.6836 201.115 119.08 165.417C142.477 129.718 179.11 104.711 220.942 95.8823Z" fill="#C4FEC7"/>
+    </svg>
+  </div>
+
+  <!-- Course Detail Main Section -->
+<main class="course-detail-grid">
+  <!-- Left Content -->
+  <section class="course-left">
+    <CourseIcon 
+    width="60" 
+    height="60" 
+    style="flex: none; order: 0; flex-grow: 0; margin-bottom: 16px;" 
+   />
+    <h2>TITLE</h2>
+    <p>[date - date]</p>
+    <p>[Location]</p>
+    <button class="register-btn">Register</button>
+
+    <h3>ABOUT THIS COURSE</h3>
+    <p>[...]</p>
+
+    <h3>WHAT YOU’LL LEARN</h3>
+    <p>[...]</p>
+
+    <h3>MEET THE INSTRUCTORS</h3>
+    <div class="instructors-icons">
+      <div class="instructor-icon">😀</div>
+      <div class="instructor-icon">😀</div>
+      <div class="instructor-icon">😀</div>
+    </div>
+
+    <h3>PMI</h3>
+    <p>[...]</p>
+
+    <button class="register-btn">Register</button>
+  </section>
+
+  <!-- Right Sidebar -->
+  <aside class="course-right">
+    <p><strong>Length</strong></p>
+    <p><strong>Effort</strong></p>
+    <p><strong>Price</strong></p>
+
+    <h3>REVIEWS</h3>
+    <div class="review-card">
+  <ReviewIcon class="review-icon" />
+  <p>[...]</p>
+</div>
+    <div class="review-card">
+  <ReviewIcon class="review-icon" />
+  <p>[...]</p>
+</div>
+    <div class="review-card">
+  <ReviewIcon class="review-icon" />
+  <p>[...]</p>
+</div>
+
+    <h3>WHAT YOU’LL LEARN</h3>
+    <p>[...]</p>
+
+    <h3>MEET THE INSTRUCTORS</h3>
+    <p>[...]</p>
+
+    <h3>PMI</h3>
+    <p>[...]</p>
+  </aside>
+</main>
+
+<style>
+.course-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 500px; 
+  gap: 24px; 
+  padding: 48px;
+  background-color: #121212;
+  color: white;
+}
+
+.course-left {
+  padding-left: 48px; 
+}
+
+.course-left h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.course-left h3 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.course-left p, .course-left li, .course-right p, .course-right li {
+  line-height: 1.8;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.register-btn {
+  background-color: #C4FEC7;
+  color: black !important;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-weight: 600;
+  margin: 24px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 12px;
+}
+
+.register-btn:hover {
+  background-color: #a8e4aa;
+}
+
+.instructors-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.instructor-icon {
+  width: 52px;
+  height: 52px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.review-card {
+  background: #333;
+  height: 80px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  width: 80%;           /* 🚩 按比例缩小宽度 */
+  margin-left: 0;       /* 🚩 左侧贴齐 */
+  margin-right: auto;   /* 🚩 右侧留白缩进去 */
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.review-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+</style>
+  <!-- Footer already in place -->
+
+</body>
+</html>
