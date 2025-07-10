@@ -558,6 +558,21 @@ h2.home-section-title {
     padding-left: 95px;
 }
 
+.training-top-banner {
+    height: 275px;
+    flex-shrink: 0;
+    background-image: url('../assets/TrainingBanner2.png'), none;
+    background-color: var(--Schemes-Surface-Container-High, #D1D6CE);
+    /* background-position: 50%, 0% 0%; */
+    background-size: 100% 100%;
+    background-repeat: no-repeat, repeat;
+    background-attachment: scroll, scroll;
+    background-origin: padding-box, padding-box;
+    background-clip: border-box, border-box;
+    padding-top: 95px;
+    padding-left: 95px;
+}
+
 .assessment-top-banner > div {
     display: flex;
     width: 1108px;
@@ -566,7 +581,27 @@ h2.home-section-title {
     gap: 40px;
 }
 
+.training-top-banner > div {
+    display: flex;
+    width: 1108px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
 .assessment-top-banner > div > h1 {
+    color: var(--M3-sys-dark-high-contrast-primary, #C4FEC7);
+    align-self: stretch;
+    /* M3/display/large-emphasized */
+    font-family: var(--Static-Display-Large-Font, Roboto);
+    font-size: var(--Static-Display-Large-Size, 57px);
+    font-style: italic;
+    font-weight: 700;
+    line-height: var(--Static-Display-Large-Line-Height, 64px); /* 112.281% */
+    letter-spacing: var(--Static-Display-Large-Tracking, -0.25px);
+}
+
+.training-top-banner > div > h1 {
     color: var(--M3-sys-dark-high-contrast-primary, #C4FEC7);
     align-self: stretch;
     /* M3/display/large-emphasized */
