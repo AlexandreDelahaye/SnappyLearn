@@ -1,0 +1,145 @@
+---
+
+---
+
+<div class="contact-us-page-container">
+    <div class="contact-us-banner">
+        <div>
+            <h1>Connect With Us!</h1>
+            <h3>Register to create your account and connect with us about your assessment and coaching needs.</h3>
+            <!-- <a href="">Collaborate With Us</a> -->
+        </div>
+        <!-- <svg id="hero-bg-svg" xmlns="http://www.w3.org/2000/svg" width="499" height="247" viewBox="0 0 499 247" fill="none">
+            <path opacity="0.3" d="M220.942 95.8823C249.786 89.8704 279.714 91.7797 307.532 101.406C335.35 111.033 360.012 128.015 378.885 150.539L340.993 176.342L474.028 200.809L498.6 68.9811L455.397 98.3783C420.237 53.2014 370.745 21.2521 314.992 7.73921C259.239 -5.77368 200.512 -0.0530709 148.386 23.9684C96.2607 47.9898 53.8107 88.8952 27.957 140.016C2.10342 191.136 -5.62882 249.456 6.02093 305.467L96.1444 286.299C87.4351 244.589 95.6836 201.115 119.08 165.417C142.477 129.718 179.11 104.711 220.942 95.8823Z" fill="#C4FEC7"/>
+        </svg> -->
+    </div>
+    <div class="assessment-body-container-why-assessment">
+        <h3>General Info</h3>
+        <div class="contact-us-form-container">
+            <div class="input-wrapper">
+                <input type="text" id="fullname" required />
+                <label for="fullname">Full Name</label>
+            </div>
+            <div class="input-wrapper" style="width: 468px;">
+                <input type="text" id="fullname" required />
+                <label for="fullname">Email</label>
+            </div>
+            <div class="input-wrapper" style="width: 591px">
+                <input type="text" id="fullname" required />
+                <label for="fullname">Password</label>
+            </div>
+            <div class="input-wrapper" style="width: 326px">
+                <input type="text" id="fullname" required />
+                <label for="fullname">Country</label>
+            </div>
+            <div class="input-wrapper" style="width: 326px">
+                <input type="text" id="fullname" required />
+                <label for="fullname">Mailing Address</label>
+            </div>
+            <div class="input-wrapper" style="width: 327px">
+                <input type="text" id="fullname" required />
+                <label for="fullname">Contact Number</label>
+            </div>
+        </div>
+        <h3>Message</h3>
+        <textarea name="" placeholder="Start typing..." id="messagetextarea"></textarea>
+        <div>
+            <button id="subBtn" type="submit">Send</button>
+            <button id="resetBtn" type="submit">Reset</button>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById("subBtn")?.addEventListener("click", () => {document.location.reload(); alert("Thank you for submitting.");});
+    document.getElementById("resetBtn")?.addEventListener("click", () => document.location.reload());
+</script>
+
+<style>
+
+.input-wrapper {
+  position: relative;
+  width: fit-content;
+  /* margin: 40px; */
+  width: 100%;
+  background-color: #1e2520;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #9be6a2;
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-wrapper label {
+  position: absolute;
+  top: 16px;
+  left: 35px;
+  background-color: #1e2520;
+  padding: 0 5px;
+  color: #9be6a2;
+  font-size: 12px;
+  pointer-events: none;
+}
+
+#messagetextarea {
+    display: flex;
+    width: 1104px;
+    color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background: var(--M3-sys-dark-high-contrast-surface-container-high, #383D37);
+    height: 72px;
+    padding: 5px 4px;
+}
+
+#subBtn {
+    display: inline;
+    width: 200px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 100px;
+    padding: 14px 48px;
+    background: var(--M3-sys-dark-high-contrast-primary, #C4FEC7);
+    color: var(--M3-sys-dark-high-contrast-on-primary, #000);
+
+    /* M3/headline/medium */
+    font-family: var(--Static-Headline-Medium-Font, Roboto);
+    font-size: var(--Static-Headline-Medium-Size, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Static-Headline-Medium-Line-Height, 36px); /* 128.571% */
+    letter-spacing: var(--Static-Headline-Small-Tracking, 0px);
+    cursor: pointer;
+}
+
+#resetBtn {
+    width: 200px;
+    display: inline;
+    align-items: center;
+    gap: 40px;
+    border-radius: 100px;
+    background-color: #00000000;
+    padding: 14px 48px;
+    color: #C4FEC7;
+    border: none;
+
+    /* M3/headline/medium */
+    font-family: var(--Static-Headline-Medium-Font, Roboto);
+    font-size: var(--Static-Headline-Medium-Size, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Static-Headline-Medium-Line-Height, 36px); /* 128.571% */
+    letter-spacing: var(--Static-Headline-Small-Tracking, 0px);
+    cursor: pointer;
+}
+</style>
