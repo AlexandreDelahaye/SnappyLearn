@@ -305,6 +305,19 @@ h2.home-section-title {
     opacity: 0.3;
 }
 
+#coaching-bg-svg {
+    z-index: -1;
+    position: absolute;
+    right: 21px;
+    bottom: 0;
+    width: 600px;
+    height: 500px;
+    /* transform: rotate(-12.008deg); */
+    flex-shrink: 0;
+    fill: #c4fec7;
+    opacity: 0.3;
+}
+
 .our-services-banner {
     display: flex;
     padding: 80px 202px;
