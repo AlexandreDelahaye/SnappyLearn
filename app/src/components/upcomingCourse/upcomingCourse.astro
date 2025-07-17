@@ -1,0 +1,203 @@
+---
+---
+
+  <!-- Banner -->
+  <div class="hero-banner" style="position: relative;">
+    <div>
+      <h1>COURSES</h1>
+      <p style="font-size: 20px; line-height: 1.6; color: white; max-width: 720px; margin-top: 12px;">
+        1–2 day training courses are specifically designed to prepare you for the Agile certification exams from SAFe, Scrum.org, and Scrum Alliance.
+      </p>
+    </div>
+    <svg width="858" height="480" viewBox="0 0 858 480" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0; right: 0; z-index: 0;">
+      <mask id="mask0_60930_1215" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="-228" width="872" height="872">
+        <rect x="223.108" y="-227.649" width="685.753" height="685.753" transform="rotate(18.9581 223.108 -227.649)" fill="#D9D9D9"/>
+      </mask>
+      <g mask="url(#mask0_60930_1215)">
+        <path d="M352.449 451.23L198.561 283.563L254.257 121.424L166.587 24.8419L519.538 -35.1869L761.096 229.062L686.834 445.247L632.788 426.682L696.839 240.222L632.581 251.382L576.885 413.521L352.449 451.23ZM429.495 226.938L648.95 190.539L498.187 26.9663L278.733 63.3653L429.495 226.938ZM373.567 389.752L533.746 363.203L568.788 261.191L408.145 289.091L298.557 168.363L263.514 270.376L373.567 389.752Z" fill="url(#paint0_linear_60930_1215)"/>
+      </g>
+      <defs>
+        <linearGradient id="paint0_linear_60930_1215" x1="173.704" y1="362.429" x2="712.787" y2="103.086" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#759877" stop-opacity="0"/>
+          <stop offset="1" stop-color="#C4FEC7"/>
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+
+<section class="course-detail-main">
+  <aside class="course-filter">
+    <button class="filter-button">Courses ⌄</button>
+    <button class="filter-button">Course Types ⌄</button>
+    <button class="filter-button">Countries ⌄</button>
+    <button class="filter-button">Cities ⌄</button>
+    <button class="filter-button">Partners ⌄</button>
+    <button class="clear-button">Clear</button>
+  </aside>
+
+  <div class="course-list">
+    <h2 class="course-list-title">Upcoming Courses</h2>
+
+    {[
+      {
+        date: "Jul 18, 2025",
+        title: "Certified ScrumMaster®",
+        location: "Singapore",
+        instructor: "Dan Rawsthorne",
+        link: "https://www.scrumalliance.org/courses-events/search/coursedetail?id=202506280"
+      },
+      {
+        date: "Jul 19, 2025",
+        title: "Advanced Certified Scrum Product Owner®",
+        location: "Online",
+        instructor: "Doug Shimp",
+        link: "https://www.scrumalliance.org/courses-events/search/coursedetail?id=202506269"
+      },
+      {
+        date: "Oct 3–4, 2025",
+        title: "Certified ScrumMaster®",
+        location: "London",
+        instructor: "Doug Shimp",
+        link: "https://www.scrumalliance.org/courses-events/search/coursedetail?id=202506977"
+      },
+      {
+        date: "Nov 1–2, 2025",
+        title: "Agile Leadership Essentials",
+        location: "New York",
+        instructor: "Michael Lee",
+        link: "https://www.scrumalliance.org/courses-events/search/coursedetail?id=202504071"
+      }
+    ].map(course => {
+      let thumbSrc = "default.png";
+      if (course.title.includes("Advanced Certified ScrumMaster")) {
+        thumbSrc = "csp-sm.jpg";
+      } else if (course.title.includes("Advanced Certified Scrum Product Owner")) {
+        thumbSrc = "sa-adv_cspo-600.png";
+      } else if (course.title.includes("Certified ScrumMaster")) {
+        thumbSrc = "csm1.png";
+      } else if (course.title.includes("Agile Leadership Essentials")) {
+        thumbSrc = "cspo.webp";
+      }
+
+      return (
+        <div class="course-card">
+          <img src={thumbSrc} alt="Course Thumbnail" class="course-thumb" />
+          <div class="course-card-content">
+            <div class="course-card-info">
+              <div><strong>Date:</strong> {course.date}</div>
+              <div><strong>Title:</strong> {course.title}</div>
+              <div><strong>Location:</strong> {course.location}</div>
+              <div><strong>Instructor:</strong> {course.instructor}</div>
+            </div>
+            <a href={course.link} target="_blank" rel="noopener">
+              <button class="learn-more-btn">Learn More</button>
+            </a>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+</section>
+
+<style>
+  .course-detail-main {
+    display: flex;
+    padding: 64px 48px;
+    gap: 48px;
+    background-color: #111;
+  }
+
+  .course-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 160px;
+  }
+
+  .filter-button {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    text-align: left;
+  }
+
+  .clear-button {
+    background-color: white;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+  }
+
+  .course-list {
+    flex: 1;
+  }
+
+  .course-list-title {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .course-card {
+    background-color: #2a2a2a;
+    padding: 20px 24px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .course-thumb {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .course-card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .course-card-info {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    row-gap: 8px;
+    column-gap: 16px;
+    font-size: 16px;
+    color: white;
+  }
+
+  .course-card-info div {
+    display: contents;
+  }
+
+  .course-card-info strong {
+    color: #ccc;
+    font-weight: 500;
+    margin-right: 8px;
+  }
+
+  .learn-more-btn {
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    padding: 8px 20px;
+    background: transparent;
+    color: white;
+    font-weight: 500;
+    transition: background 0.2s ease;
+    margin-left: 16px;
+  }
+
+  .learn-more-btn:hover {
+    background: #444;
+  }
+</style>
