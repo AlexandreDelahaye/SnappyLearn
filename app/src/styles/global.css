@@ -238,6 +238,30 @@ h2.home-section-title {
     z-index: 1;
 }
 
+.herobannerdiv0 {
+    background: url("../assets/herobanner1_.png");
+    /* width: 100%; */
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+}
+
+.herobannerdiv1 {
+    background: url("../assets/herobanner2_.png");
+    /* width: 100%; */
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+}
+
+.herobannerdiv2 {
+    background: url("../assets/herobanner3_.png");
+    /* width: 100%; */
+      background-size: cover;
+      background-position: center;
+      transition: background-image 1s ease-in-out;
+}
+
 .contact-us-banner {
     position: relative;
     display: flex;
@@ -247,6 +271,11 @@ h2.home-section-title {
     /* background-color: #1c211c; */
     background: linear-gradient(83deg, #313630 29.87%, #8E9C8B 148.34%);
     z-index: 1;
+}
+
+.hero-banner > div {
+    background-color: #00000055;
+    box-shadow: #00000055 0px -96px 0px 215px;
 }
 
 .hero-banner > div, .contact-us-banner > div {
@@ -369,7 +398,7 @@ h2.home-section-title {
 
 .our-services-column > p {
     margin: 0;
-    width: 247px;
+    width: 289px;
     text-justify: inter-word;
     text-align: justify;
     height: 180px;
@@ -459,7 +488,7 @@ h2.home-section-title {
 .about-us-second-row > div > p {
     text-align: justify;
     margin: 0;
-    width: 213px;
+    width: 281px;
     flex-shrink: 0;
 
     color: var(--M3-sys-dark-high-contrast-on-surface, #FFF);
