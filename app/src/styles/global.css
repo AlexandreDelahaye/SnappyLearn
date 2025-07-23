@@ -278,6 +278,11 @@ h2.home-section-title {
     box-shadow: #00000055 0px -96px 0px 215px;
 }
 
+.assessment-top-banner > div {
+    background-color: #00000055;
+    box-shadow: #00000055 178px -96px 0px 286px
+}
+
 .hero-banner > div, .contact-us-banner > div {
     /* height: 320px; */
     width: 100%;

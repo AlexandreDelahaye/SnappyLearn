@@ -7,6 +7,7 @@ let assessmentBgColor = 'background-color: #00000000';
 let coachingBgColor = 'background-color: #00000000';
 let trainingBgColor = 'background-color: #00000000';
 let resourcesBgColor = 'background-color: #00000000';
+let registerBgColor = 'background-color: #00000000';
 
 console.log(Astro.props.currentPage)
 switch (Astro.props.currentPage) {
@@ -21,6 +22,9 @@ switch (Astro.props.currentPage) {
         break;
     case "resources":
         resourcesBgColor = 'background-color: #c4fec8; color: black';
+        break;
+    case "register":
+        registerBgColor = 'background-color: #c4fec8; color: black';
         break;
     default:
         break;
@@ -49,7 +53,7 @@ switch (Astro.props.currentPage) {
                 <path d="M0.987122 0V40" stroke="white"/>
             </svg>
             <li><a class="alt" href="/upcoming">View Courses</a></li>
-            <li><a href="/register" id="register-link" style={resourcesBgColor}>Register</a></li>
+            <li><a href="/register" id="register-link" style={registerBgColor}>Register</a></li>
             <li class="alt">
                 <a class="social-link" href="">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
