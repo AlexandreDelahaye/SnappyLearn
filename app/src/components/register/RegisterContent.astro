@@ -1,7 +1,6 @@
 ---
 
 ---
-
 <div class="contact-us-page-container">
     <div class="contact-us-banner">
         <div>
@@ -29,9 +28,16 @@
                 <label for="fullname">Password</label>
             </div>
             <div class="input-wrapper">
-                <input type="text" id="fullname" required />
+                <input type="text" id="course" disabled required />
                 <label for="fullname">Courses</label>
             </div>
+            <script>
+                const paramsvals = new URLSearchParams(window.location.search);
+                console.log(paramsvals.get("course"));
+                const val = paramsvals.get("course");
+                const input = document.getElementById("course");
+                input.value = val;
+            </script>
             <div class="input-wrapper" style="width: 468px">
                 <input type="text" id="fullname" required />
                 <label for="fullname">Country</label>

@@ -1,4 +1,7 @@
 ---
+import saImg from "../../assets/sa.png";
+import ssmImg from "../../assets/ssm.png";
+
 ---
 
   <!-- Banner -->
@@ -41,39 +44,39 @@
 
     {[
       {
-        date: "Jul 18, 2025",
-        title: "Certified ScrumMaster®",
-        location: "Singapore",
+        date: "Sep 18, 2025",
+        title: "SAFe Agilist Course",
+        location: "Brookeline, MA",
         instructor: "Dan Rawsthorne",
-        link: "https://www.scrumalliance.org/courses-events/search/coursedetail?id=202506280"
+        link: "/safe-agilist"
       },
       {
-        date: "Jul 19, 2025",
-        title: "Advanced Certified Scrum Product Owner®",
-        location: "Online",
+        date: "Sep 19, 2025",
+        title: "Scrum Master Course",
+        location: "Brookeline, MA",
         instructor: "Doug Shimp",
-        link: "https://www.scrumalliance.org/courses-events/search/coursedetail?id=202506269"
+        link: "/safe-scrum-master"
       },
       {
         date: "Oct 3–4, 2025",
         title: "Certified ScrumMaster®",
-        location: "London",
+        location: "London, UK",
         instructor: "Doug Shimp",
         link: "https://www.scrumalliance.org/courses-events/search/coursedetail?id=202506977"
       },
       {
         date: "Nov 1–2, 2025",
         title: "Agile Leadership Essentials",
-        location: "New York",
+        location: "New York, NY",
         instructor: "Michael Lee",
         link: "https://www.scrumalliance.org/courses-events/search/coursedetail?id=202504071"
       }
     ].map(course => {
       let thumbSrc = "default.png";
-      if (course.title.includes("Advanced Certified ScrumMaster")) {
-        thumbSrc = "csp-sm.jpg";
-      } else if (course.title.includes("Advanced Certified Scrum Product Owner")) {
-        thumbSrc = "sa-adv_cspo-600.png";
+      if (course.title.includes("SAFe Agilist Course")) {
+        thumbSrc = saImg.src;
+      } else if (course.title.includes("Scrum Master Course")) {
+        thumbSrc = ssmImg.src;
       } else if (course.title.includes("Certified ScrumMaster")) {
         thumbSrc = "csm1.png";
       } else if (course.title.includes("Agile Leadership Essentials")) {

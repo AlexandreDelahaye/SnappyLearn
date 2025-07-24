@@ -1,0 +1,196 @@
+---
+import CourseIcon from "../../assets/courseDetail.svg";
+import ReviewIcon from "../../assets/courseDetail1.svg";
+import saImg from "../../assets/sa.png";
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Course Detail</title>
+  <link rel="stylesheet" href="/styles.css" /> <!-- replace with your global stylesheet -->
+
+  <style>
+    .course-detail-grid,
+    .course-detail-grid h1,
+    .course-detail-grid h2,
+    .course-detail-grid h3,
+    .course-detail-grid h4,
+    .course-detail-grid h5,
+    .course-detail-grid h6,
+    .course-detail-grid p,
+    .course-detail-grid a,
+    .course-detail-grid li,
+    .course-detail-grid span,
+    .course-detail-grid button {
+    color: white;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Top Header already in place -->
+  <!-- Course Detail Main Section -->
+<main class="course-detail-grid">
+  <!-- Left Content -->
+  <section class="course-left">
+    <img src={saImg.src}
+    height="150" 
+    style="flex: none; order: 0; flex-grow: 0; margin-bottom: 16px;" 
+   />
+    <h2>SAFe Agilist Course</h2>
+    <p>09/18 - 11/14</p>
+    <p>Brookline, MA</p>
+    <button id="registerBtn1" class="register-btn">Register</button>
+
+    <h3>ABOUT THIS COURSE</h3>
+    <p style="text-align: justify; margin-bottom: 50px;">Transform your organization and lead at scale with our SAFe® Agilist (SA) certification! This two-day course teaches you to effectively implement the Scaled Agile Framework® (SAFe®).
+<br />
+      You'll learn to lead Lean-Agile transformations, organize around value, and execute Program Increments (PIs). We'll cover Lean-Agile leadership, building Agile Release Trains (ARTs), and fostering a DevOps culture through interactive exercises and real-world examples.
+      Become a certified SAFe Agilist, equipped to drive business agility and achieve superior outcomes.
+      </p>
+    
+    <h3>WHAT YOU’LL LEARN</h3>
+    <p style="text-align: justify; margin-bottom: 50px;">Discover how SAFe operates in organizations, including agile Team and ART formation, PI planning, and key alignment events.
+      Learn how to align your entire organization around clear objectives and improve the flow of value and work, from strategy to delivery.
+      <br />Get equipped with guidance to build a shared culture and language that puts the customer first.
+      <br />Establish team and technical agility, and learn how to move from traditional business hierarchy to agile teams organized around the flow of value.
+    </p>
+
+    <h3>MEET THE INSTRUCTORS</h3>
+    <div class="instructors-icons">
+      <div class="instructor-icon">Raj Heda</div>
+      <div class="instructor-icon">Walter White</div>
+      <div class="instructor-icon">Jane Smith</div>
+    </div>
+
+    <button id="registerBtn2" class="register-btn">Register</button>
+    <script>
+      document.getElementById("registerBtn1")?.addEventListener("click", () => {
+        document.location.href = "/register?course=SAFe%20Agilist";
+        }
+      );
+      document.getElementById("registerBtn2")?.addEventListener("click", () => {
+        document.location.href = "/register?course=SAFe%20Agilist";
+        }
+      );
+    </script>
+  </section>
+
+  <!-- Right Sidebar -->
+  <aside class="course-right">
+    <p>Length: <strong>2 months</strong></p>
+    <p>Effort: <strong>Intermediate</strong></p>
+    <p>Price: <strong>USD 499.00</strong></p>
+
+    <h3>REVIEWS</h3>
+    <div class="review-card">
+  <ReviewIcon class="review-icon" />
+  <p>The Scrum Master certification training by SCRUMstudy was transformative for a career. The course content was comprehensive.</p>
+</div>
+    <div class="review-card">
+  <ReviewIcon class="review-icon" />
+  <p>The Certified ScrumMaster (CSM) course taught by Eric Tucker was a very positive experience.</p>
+</div>
+    <div class="review-card">
+  <ReviewIcon class="review-icon" />
+  <p>This class was a relevant step in learning more about being a better scrum master and the journey in front of the scrum master.
+  </p>
+</div>
+  </aside>
+</main>
+
+<style>
+.course-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 500px; 
+  gap: 24px; 
+  padding: 48px;
+  background-color: #121212;
+  color: white;
+}
+
+.course-left {
+  padding-left: 48px; 
+}
+
+.course-left h2 {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.course-left h3 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.course-left p, .course-left li, .course-right p, .course-right li {
+  line-height: 1.8;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.register-btn {
+  background-color: #C4FEC7;
+  color: black !important;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-weight: 600;
+  margin: 24px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 12px;
+}
+
+.register-btn:hover {
+  background-color: #a8e4aa;
+}
+
+.instructors-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.instructor-icon {
+  /* width: 52px; */
+  height: 52px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  padding: 5px;
+  font-size: 24px;
+  padding: 0 10px;
+}
+
+.review-card {
+  background: #333;
+  height: 80px;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  width: 80%;           /* 🚩 按比例缩小宽度 */
+  margin-left: 0;       /* 🚩 左侧贴齐 */
+  margin-right: auto;   /* 🚩 右侧留白缩进去 */
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.review-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+</style>
+  <!-- Footer already in place -->
+
+</body>
+</html>
